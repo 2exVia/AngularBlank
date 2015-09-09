@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+    <!-- compiled css output by SASS /scss/ionic.app.scss  -->
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+
+		<!-- FONTS -->
+		<link href="lib/ionic/css/fonts.css" rel="stylesheet">
+						
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    
+    <!-- ng-cordova -->
+		<script src="lib/ng-cordova.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    
+  </head>
+  <body ng-app="starter" ng-controller="RootCtrl">
+
+   <ion-nav-bar class="bar-dark">
+			<ion-nav-back-button></ion-nav-back-button>
+		</ion-nav-bar>
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+  </body>
+</html>
+
+
+<!-- TPL : Home.html  -->
+<script id="Home.html" type="text/ng-template">
+
+	<ion-view>
+
+		<ion-nav-title>
+      <!--<img src="img/creatrust_picto_off.svg" class="ctr-picto" />-->
+      <h1 class="title" ng-bind-html="trustAsHtml('2exVia<sup>®</sup>')"></h1>
+    </ion-nav-title>
+
+	  <ion-content has-bouncing="true" padding="true">
+			Hey
+			<button class="button button-full button-assertive" ng-click="goto('page1')">Page 1</button>
+	  </ion-content>
+	</ion-view>
+</script>
+
+
+<!-- TPL : Page1.html  -->
+<script id="Page1.html" type="text/ng-template">
+
+	<ion-view view-title="Page 1">
+
+	  <ion-content has-bouncing="true">
+			Page 1
+			<button class="button button-full button-assertive" ng-click="goto('home')">Home</button>
+	  </ion-content>
+	</ion-view>
+</script>
